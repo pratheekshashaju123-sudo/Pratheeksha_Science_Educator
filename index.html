@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Pratheeksha Shaju, Science Teacher based in Abu Dhabi, UAE, specialising in primary and middle school science, biology and environmental science." />
+  <meta name="keywords" content="Science Teacher Abu Dhabi, Primary Science Teacher, Middle School Science Teacher, Biology Teacher, Environmental Science Teacher, CTET, K-TET, UAE teacher" />
+  <title>Pratheeksha Shaju | Science Teacher</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --primary: #165d5b;
+      --primary-2: #227a77;
+      --soft: #eaf5f4;
+      --line: #e5e7eb;
+      --shadow: 0 18px 50px rgba(17, 24, 39, .09);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(246,248,251,.9);
+      border-bottom: 1px solid rgba(229,231,235,.8);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: -.02em; text-decoration: none; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a { text-decoration: none; font-size: 14px; color: var(--muted); font-weight: 700; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { padding: 10px 15px; border-radius: 999px; background: var(--primary); color: #fff !important; }
+
+    .hero { padding: 78px 0 48px; }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 58px; align-items: center; }
+    .eyebrow { display: inline-flex; gap: 8px; align-items: center; padding: 7px 12px; border-radius: 999px; background: var(--soft); color: var(--primary); font-size: 13px; font-weight: 800; }
+    h1 { margin: 18px 0 10px; font-size: clamp(44px, 7vw, 74px); line-height: .98; letter-spacing: -.055em; }
+    .hero h2 { margin: 0; font-size: clamp(21px, 3vw, 31px); font-weight: 650; color: var(--primary); letter-spacing: -.025em; }
+    .lead { max-width: 720px; font-size: 18px; color: var(--muted); margin: 22px 0 30px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 18px; border-radius: 12px; text-decoration: none; font-weight: 800; border: 1px solid transparent; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-2); }
+    .btn-secondary { background: #fff; border-color: var(--line); }
+    .btn-secondary:hover { border-color: #b8c1cc; }
+    .quick-facts { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 18px; color: var(--muted); font-size: 14px; font-weight: 650; }
+    .quick-facts span::before { content: "•"; color: var(--primary); margin-right: 8px; }
+
+    .photo-wrap { position: relative; justify-self: end; }
+    .photo-card { width: min(330px, 78vw); aspect-ratio: 4/5; border-radius: 30px; overflow: hidden; background: #fff; box-shadow: var(--shadow); border: 8px solid #fff; }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; object-position: center 34%; display: block; }
+    .photo-badge { position: absolute; left: -22px; bottom: 24px; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 14px 16px; font-size: 13px; font-weight: 800; }
+    .photo-badge strong { display: block; color: var(--primary); font-size: 16px; }
+
+    section { padding: 58px 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 26px; }
+    .section-kicker { color: var(--primary); font-weight: 850; font-size: 13px; text-transform: uppercase; letter-spacing: .12em; }
+    h3 { margin: 5px 0 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.08; letter-spacing: -.035em; }
+    .section-intro { max-width: 620px; color: var(--muted); }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(17,24,39,.04); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .about-card { padding: 28px; }
+    .about-card p { margin: 0; color: var(--muted); }
+    .skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+    .skill { padding: 12px 14px; border-radius: 12px; background: var(--soft); color: var(--primary); font-weight: 750; font-size: 14px; }
+
+    .timeline { display: grid; gap: 16px; }
+    .role { padding: 26px; display: grid; grid-template-columns: 180px 1fr; gap: 22px; }
+    .role-date { color: var(--primary); font-weight: 850; }
+    .role h4 { margin: 0 0 2px; font-size: 21px; letter-spacing: -.02em; }
+    .role .org { color: var(--muted); font-weight: 650; margin-bottom: 12px; }
+    .role ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    .role li + li { margin-top: 5px; }
+
+    .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .edu { padding: 24px; }
+    .edu .year { color: var(--primary); font-weight: 850; font-size: 14px; }
+    .edu h4 { margin: 7px 0 2px; font-size: 20px; }
+    .edu p { margin: 0; color: var(--muted); }
+
+    .credential-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .credential { padding: 23px; }
+    .credential .icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--soft); color: var(--primary); font-size: 20px; font-weight: 900; }
+    .credential h4 { margin: 14px 0 5px; font-size: 18px; }
+    .credential p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .contact { padding-bottom: 90px; }
+    .contact-card { padding: 34px; background: linear-gradient(135deg, #104f4d, #1d7470); color: #fff; border: none; }
+    .contact-card h3 { margin-top: 0; }
+    .contact-card p { color: rgba(255,255,255,.82); max-width: 660px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .contact-card .btn-primary { background: #fff; color: var(--primary); }
+    .contact-card .btn-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+
+    footer { border-top: 1px solid var(--line); padding: 24px 0 38px; color: var(--muted); font-size: 14px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    @media (max-width: 860px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { padding-top: 50px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .photo-wrap { justify-self: start; }
+      .about-grid, .edu-grid { grid-template-columns: 1fr; }
+      .credential-grid { grid-template-columns: 1fr 1fr; }
+      .skill-grid { grid-template-columns: 1fr 1fr; }
+      .role { grid-template-columns: 1fr; gap: 7px; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 24px, 1120px); }
+      .hero { padding-top: 36px; }
+      .credential-grid, .skill-grid { grid-template-columns: 1fr; }
+      .photo-badge { left: 10px; bottom: 10px; }
+      section { padding: 46px 0; }
+      .role, .about-card, .edu, .credential, .contact-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Pratheeksha Shaju</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#credentials">Credentials</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Abu Dhabi, UAE · Available Immediately</div>
+          <h1>Pratheeksha Shaju</h1>
+          <h2>Science Teacher · Primary & Middle School</h2>
+          <p class="lead">
+            Qualified science educator with 3+ years of experience across classroom instruction, curriculum support and educational outreach. Academic background in Natural Science, Environmental Science and Zoology, with CTET and K-TET qualifications.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:pratheekshashaju123@gmail.com?subject=Science%20Teacher%20Opportunity%20-%20Pratheeksha%20Shaju">Email Me</a>
+            <a class="btn btn-secondary" href="Pratheeksha_Shaju_ATS_CV.docx" download>Download CV</a>
+          </div>
+          <div class="quick-facts">
+            <span>Family Visa</span>
+            <span>Immediate Joiner</span>
+            <span>CTET & K-TET Qualified</span>
+            <span>English · Malayalam · Hindi</span>
+          </div>
+        </div>
+        <div class="photo-wrap">
+          <div class="photo-card"><img src="assets/pratheeksha-shaju.jpg" alt="Pratheeksha Shaju" /></div>
+          <div class="photo-badge"><strong>Science Educator</strong>Biology · General Science · Environmental Science</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Profile</div><h3>Teaching with curiosity, clarity and care.</h3></div>
+          <p class="section-intro">I create engaging science learning experiences that connect classroom concepts with the natural world, practical observation and everyday life.</p>
+        </div>
+        <div class="about-grid">
+          <div class="card about-card">
+            <h4>About Me</h4>
+            <p>I am a qualified Science Teacher currently based in Abu Dhabi. My experience includes science content development, classroom teaching, learner assessment, practical demonstrations and educational outreach. I have worked with primary and middle-school learners and supported student-centred, inquiry-based science education.</p>
+          </div>
+          <div class="card about-card">
+            <h4>Core Teaching Strengths</h4>
+            <div class="skill-grid">
+              <div class="skill">Science Teaching</div><div class="skill">Lesson Planning</div><div class="skill">Classroom Management</div>
+              <div class="skill">Student Assessment</div><div class="skill">Inquiry-Based Learning</div><div class="skill">Differentiated Instruction</div>
+              <div class="skill">Biology</div><div class="skill">Environmental Science</div><div class="skill">Practical Demonstrations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Experience</div><h3>Science education in classrooms and outreach.</h3></div>
+          <p class="section-intro">Experience is presented as one overall Mazhavillu / K-DISC engagement with institutional assignments, avoiding misleading overlap.</p>
+        </div>
+        <div class="timeline">
+          <article class="card role">
+            <div class="role-date">Feb 2021 – Jul 2024</div>
+            <div>
+              <h4>Junior Programme Executive – Science Education</h4>
+              <div class="org">Mazhavillu: Teach Science for Kerala · Kerala Development & Innovation Strategic Council (K-DISC)</div>
+              <ul>
+                <li>Delivered science learning activities for school-age learners.</li>
+                <li>Developed lesson plans, instructional modules and curriculum-aligned resources.</li>
+                <li>Used inquiry-based, experiential and student-centred teaching approaches.</li>
+                <li>Supported assessment, mentoring and educational programme implementation.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card role">
+            <div class="role-date">Feb 2021 – Jul 2023</div>
+            <div>
+              <h4>Institutional Assignment – Science Education</h4>
+              <div class="org">KSCSTE – Kerala Forest Research Institute (KFRI), Peechi, Kerala</div>
+              <ul>
+                <li>Designed science education content and delivered learning activities to students aged 9–13.</li>
+                <li>Developed resources in biodiversity, ecology, environmental science and conservation.</li>
+                <li>Conducted workshops and interactive learning sessions.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card role">
+            <div class="role-date">Jul 2023 – Feb 2024</div>
+            <div>
+              <h4>Institutional Assignment – Science Teaching</h4>
+              <div class="org">Indira Gandhi Memorial Model Residential Higher Secondary School, Nilambur</div>
+              <ul>
+                <li>Taught Standard 6 learners and supported structured science classroom instruction.</li>
+                <li>Planned lessons and learner activities to support understanding, creativity and progress.</li>
+                <li>Applied classroom management and individualised learner-support strategies.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Education</div><h3>Strong science and teacher-education foundation.</h3></div>
+        </div>
+        <div class="edu-grid">
+          <article class="card edu"><div class="year">2026 · 96.1%</div><h4>B.Ed. – Natural Science</h4><p>Mahatma Gandhi University, Kerala, India</p></article>
+          <article class="card edu"><div class="year">2020 · 77.8%</div><h4>MSc – Environmental Science</h4><p>University of Calicut, Kerala, India</p></article>
+          <article class="card edu"><div class="year">2018 · 79.2%</div><h4>BSc – Zoology</h4><p>University of Calicut, Kerala, India</p></article>
+          <article class="card edu"><div class="year">2019 · 93.8%</div><h4>Diploma – Computer Applications</h4><p>India</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Credentials</div><h3>Teaching qualifications and academic engagement.</h3></div>
+        </div>
+        <div class="credential-grid">
+          <article class="card credential"><div class="icon">✓</div><h4>CTET – Primary Stage</h4><p>Central Board of Secondary Education (CBSE), India.</p></article>
+          <article class="card credential"><div class="icon">✓</div><h4>K-TET – Category II</h4><p>Department of General Education, Government of Kerala.</p></article>
+          <article class="card credential"><div class="icon">✦</div><h4>MRS Science Workshop</h4><p>Three-day workshop for MRS Students of Kerala at KFRI, November 2023.</p></article>
+          <article class="card credential"><div class="icon">✦</div><h4>Kerala Studies Seminar</h4><p>Participant in the General Education Seminar, 5th International Congress on Kerala Studies, May 2023.</p></article>
+          <article class="card credential"><div class="icon">⌁</div><h4>Environmental Research</h4><p>MSc dissertation on environmental studies of the Chalakudy River Basin.</p></article>
+          <article class="card credential"><div class="icon">⌁</div><h4>Science & Technology Training</h4><p>Additional training in GIS, remote sensing and data analytics.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="card contact-card">
+          <div class="section-kicker" style="color:#bfe7e4">Open to Opportunities</div>
+          <h3>Looking for a Science Teacher in Abu Dhabi?</h3>
+          <p>I am currently available for primary and middle-school Science Teacher opportunities in Abu Dhabi and can join immediately.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:pratheekshashaju123@gmail.com?subject=Science%20Teacher%20Opportunity%20-%20Pratheeksha%20Shaju">pratheekshashaju123@gmail.com</a>
+            <a class="btn btn-secondary" href="tel:+971581739058">+971 58 173 9058</a>
+            <a class="btn btn-secondary" href="Pratheeksha_Shaju_ATS_CV.docx" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Pratheeksha Shaju</span>
+      <span>Science Teacher · Abu Dhabi, UAE</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
