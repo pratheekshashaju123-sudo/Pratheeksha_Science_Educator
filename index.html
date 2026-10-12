@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="description" content="Pratheeksha Shaju — Science & Biology Teacher based in Abu Dhabi, UAE. B.Ed Natural Science, MSc Environmental Science, BSc Zoology, CTET and K-TET qualified." />
+  <meta name="keywords" content="Science Teacher Abu Dhabi, Biology Teacher UAE, Primary Science Teacher, Middle School Science Teacher, CTET Teacher UAE, K-TET Teacher, Environmental Science Teacher" />
+  <meta name="theme-color" content="#071626" />
+  <meta property="og:title" content="Pratheeksha Shaju | Science & Biology Teacher — Abu Dhabi" />
+  <meta property="og:description" content="Science educator in Abu Dhabi with 3+ years of science education, classroom instruction, curriculum support and outreach experience." />
+  <meta property="og:image" content="pratheeksha-shaju.jpg" />
+  <title>Pratheeksha Shaju | Science & Biology Teacher | Abu Dhabi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#050d17;--bg2:#071626;--panel:rgba(11,28,46,.72);--panel2:rgba(13,36,57,.82);
+      --text:#eef7ff;--muted:#9bb0c3;--cyan:#63e6ff;--cyan2:#1bb8e8;--bio:#73e6a4;
+      --gold:#f2c66d;--line:rgba(135,202,228,.18);--shadow:0 22px 70px rgba(0,0,0,.38);
+      --max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;background:radial-gradient(circle at 75% 10%,rgba(25,124,165,.12),transparent 34%),linear-gradient(180deg,#050d17,#071626 42%,#06101d);color:var(--text);font:500 16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none} button{font:inherit} img{max-width:100%;display:block}
+    ::selection{background:var(--cyan);color:#002232}
+    #scienceCanvas{position:fixed;inset:0;z-index:-2;width:100%;height:100%;opacity:.72}
+    .noise{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+    .container{width:min(calc(100% - 38px),var(--max));margin:auto}
+
+    /* INTRO VIDEO */
+    #intro{position:fixed;inset:0;z-index:1000;background:#03070c;display:grid;place-items:center;transition:opacity .75s ease,visibility .75s ease}
+    #intro.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    #intro video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    #intro:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,9,16,.12),rgba(3,9,16,.06) 48%,rgba(3,9,16,.75))}
+    .intro-ui{position:relative;z-index:2;width:min(92%,1120px);height:min(88vh,760px);display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
+    .intro-top,.intro-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;pointer-events:auto}
+    .intro-brand{display:flex;align-items:center;gap:13px;color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.04em;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+    .intro-mark{width:47px;height:47px;border:1px solid rgba(99,230,255,.7);border-radius:14px;display:grid;place-items:center;background:rgba(4,18,29,.34);backdrop-filter:blur(12px);box-shadow:0 0 30px rgba(99,230,255,.18)}
+    .intro-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .intro-btn{border:1px solid rgba(255,255,255,.38);background:rgba(4,16,26,.42);color:#fff;padding:10px 14px;border-radius:999px;cursor:pointer;backdrop-filter:blur(10px);transition:.2s}
+    .intro-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+    .intro-copy{max-width:720px;text-shadow:0 3px 22px rgba(0,0,0,.65)}
+    .intro-copy span{display:inline-block;color:var(--cyan);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.77rem;margin-bottom:8px}
+    .intro-copy h1{margin:0 0 8px;font:700 clamp(2.2rem,6vw,5.6rem)/.95 "Space Grotesk",sans-serif;letter-spacing:-.055em}
+    .intro-copy p{margin:0;color:rgba(255,255,255,.82);font-size:clamp(.9rem,1.7vw,1.15rem)}
+    .intro-progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:3}.intro-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--bio),var(--gold));box-shadow:0 0 18px var(--cyan)}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:50;background:rgba(5,13,23,.72);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+    .nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-weight:700}
+    .brand-logo{width:42px;height:42px;border-radius:13px;border:1px solid rgba(99,230,255,.55);display:grid;place-items:center;color:var(--cyan);background:linear-gradient(145deg,rgba(99,230,255,.12),rgba(115,230,164,.05));box-shadow:0 0 24px rgba(99,230,255,.09)}
+    .brand small{display:block;color:var(--muted);font:500 .71rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
+    .links{display:flex;align-items:center;gap:26px;color:#bfd0de;font-size:.91rem}.links a{position:relative}.links a:not(.nav-cta):after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:var(--cyan);transition:.22s}.links a:hover:after{right:0}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:11px 17px;font-weight:800;border:1px solid transparent;transition:.22s;cursor:pointer}
+    .nav-cta{border-color:rgba(99,230,255,.45);color:var(--cyan);background:rgba(99,230,255,.06)}
+    .nav-cta:hover{background:var(--cyan);color:#02202d;box-shadow:0 0 26px rgba(99,230,255,.3)}
+    .mobile-toggle{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
+
+    section{padding:96px 0}.kicker{display:flex;align-items:center;gap:10px;color:var(--cyan);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.2em;margin-bottom:12px}.kicker:before{content:"";width:30px;height:1px;background:var(--cyan)}
+    h2{font:700 clamp(2.1rem,4vw,3.5rem)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:0 0 18px} .muted{color:var(--muted)}
+    .glass{background:linear-gradient(145deg,rgba(12,31,50,.76),rgba(6,20,34,.68));border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(16px)}
+
+    /* HERO */
+    .hero{min-height:calc(100vh - 78px);display:flex;align-items:center;padding:64px 0 76px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;right:-10%;top:5%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.11),transparent 65%);filter:blur(4px);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:center}
+    .hero h1{margin:0 0 15px;font:700 clamp(3.1rem,7vw,6.7rem)/.88 "Space Grotesk",sans-serif;letter-spacing:-.065em}
+    .hero h1 em{font-style:normal;color:transparent;background:linear-gradient(95deg,var(--cyan),#b9f5ff 47%,var(--bio));background-clip:text;-webkit-background-clip:text}
+    .role{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:.84rem;font-weight:800;margin-bottom:22px}
+    .hero-copy{font-size:1.08rem;color:#b6c8d6;max-width:680px;margin:0 0 25px}
+    .chip-row{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 29px}.chip{padding:8px 12px;border-radius:999px;border:1px solid rgba(115,230,164,.28);background:rgba(115,230,164,.06);color:#b8f6d1;font-size:.83rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn-primary{background:linear-gradient(100deg,var(--gold),#ffd98b);color:#201604}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(242,198,109,.2)}.btn-secondary{border-color:rgba(99,230,255,.38);color:var(--cyan);background:rgba(99,230,255,.04)}.btn-secondary:hover{background:rgba(99,230,255,.11);transform:translateY(-2px)}
+    .replay{margin-top:18px;border:0;background:none;color:#7f99ac;cursor:pointer;padding:0}.replay:hover{color:var(--cyan)}
+
+    .portrait-zone{position:relative;min-height:610px;display:grid;place-items:center}
+    .portrait-orbit{position:absolute;width:510px;height:510px;border:1px solid rgba(99,230,255,.18);border-radius:50%;animation:spin 28s linear infinite}.portrait-orbit:before,.portrait-orbit:after{content:"";position:absolute;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}.portrait-orbit:before{width:8px;height:8px;left:50%;top:-4px}.portrait-orbit:after{width:6px;height:6px;right:12%;bottom:9%;background:var(--bio);box-shadow:0 0 14px var(--bio)}@keyframes spin{to{transform:rotate(360deg)}}
+    .portrait-card{position:relative;width:min(430px,90%);border-radius:38px;padding:13px;background:linear-gradient(145deg,rgba(120,224,255,.17),rgba(7,22,36,.55));border:1px solid rgba(99,230,255,.28);box-shadow:0 30px 90px rgba(0,0,0,.46),0 0 55px rgba(99,230,255,.08)}
+    .portrait-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;filter:saturate(.94) contrast(1.03)}
+    .portrait-badge{position:absolute;left:-40px;bottom:55px;padding:15px 17px;border-radius:18px;background:rgba(5,22,36,.88);border:1px solid rgba(115,230,164,.32);box-shadow:var(--shadow);backdrop-filter:blur(12px);max-width:215px}.portrait-badge b{display:block;color:var(--bio);font-family:"Space Grotesk"}.portrait-badge small{color:#a8bbc9}
+    .atom{position:absolute;right:-18px;top:62px;width:112px;height:112px;border-radius:50%;border:1px solid rgba(99,230,255,.23);display:grid;place-items:center;color:var(--cyan);font-size:2rem;background:rgba(7,25,40,.55);box-shadow:0 0 45px rgba(99,230,255,.11);backdrop-filter:blur(12px)}
+
+    .stats{margin-top:-38px;position:relative;z-index:5}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-radius:24px;overflow:hidden}.stat{padding:23px 24px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat strong{display:block;font:700 1.35rem "Space Grotesk";color:#fff}.stat span{display:block;color:var(--muted);font-size:.82rem;margin-top:4px}.stat i{font-style:normal;color:var(--cyan);margin-right:7px}
+
+    /* CONTENT */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.panel{border-radius:24px;padding:29px}.panel h3{font:700 1.15rem "Space Grotesk";margin:0 0 9px}.panel p{color:#afc1cf;margin:0}
+    .fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.fit{border-radius:18px;padding:18px;background:rgba(9,28,45,.6);border:1px solid var(--line)}.fit b{display:block;color:#fff;margin-bottom:5px}.fit small{color:var(--muted)}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{border-radius:21px;padding:22px;min-height:176px;position:relative;overflow:hidden}.skill:after{content:"";position:absolute;width:110px;height:110px;right:-45px;bottom:-45px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.13),transparent 68%)}.skill-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:rgba(99,230,255,.08);border:1px solid rgba(99,230,255,.2);font-size:1.25rem;margin-bottom:14px}.skill h3{font:700 1.02rem "Space Grotesk";margin:0 0 7px}.skill p{font-size:.9rem;color:var(--muted);margin:0}
+    .timeline{display:grid;gap:18px}.job{display:grid;grid-template-columns:175px 1fr;gap:27px;border-radius:22px;padding:25px}.job-date{font-size:.82rem;color:var(--cyan);font-weight:800;letter-spacing:.06em}.job h3{font:700 1.12rem "Space Grotesk";margin:0 0 5px}.job-org{color:var(--gold);font-size:.9rem;margin-bottom:10px}.job ul{margin:0;padding-left:18px;color:#aebfcc;font-size:.93rem}.job li+li{margin-top:5px}
+    .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.edu{border-radius:21px;padding:23px}.edu .year{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.08em}.edu h3{font:700 1.06rem "Space Grotesk";margin:5px 0 3px}.edu p{margin:0;color:var(--muted);font-size:.9rem}.edu .score{color:var(--bio);font-weight:800;margin-top:8px;display:block;font-size:.86rem}
+    .cred-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.cred{border-radius:20px;padding:22px;background:linear-gradient(145deg,rgba(115,230,164,.08),rgba(12,31,50,.64));border:1px solid rgba(115,230,164,.22)}.cred strong{display:block;font:700 1.15rem "Space Grotesk";color:#d7ffe6}.cred span{font-size:.87rem;color:var(--muted)}
+    .activity-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.activity{border-radius:20px;padding:21px}.activity time{color:var(--gold);font-size:.77rem;font-weight:800}.activity h3{font:700 1rem "Space Grotesk";margin:7px 0 3px}.activity p{margin:0;color:var(--muted);font-size:.88rem}
+
+    .contact{border-radius:30px;padding:42px;background:linear-gradient(120deg,rgba(9,42,64,.94),rgba(7,26,44,.94));border:1px solid rgba(99,230,255,.24);position:relative;overflow:hidden}.contact:after{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.15),transparent 65%)}.contact-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.contact p{color:#b3c4d1;max-width:650px}.contact-buttons{display:flex;gap:11px;justify-content:flex-end;flex-wrap:wrap}
+    footer{padding:29px 0 45px;color:#7890a3;font-size:.86rem;text-align:center}.footer-links{margin-top:8px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--cyan)}
+    .reveal{opacity:0;transform:translateY(20px);transition:.65s ease}.reveal.on{opacity:1;transform:none}
+
+    @media(max-width:980px){.links{display:none}.links.open{display:flex;position:absolute;left:18px;right:18px;top:70px;background:rgba(5,13,23,.97);border:1px solid var(--line);border-radius:20px;padding:20px;flex-direction:column;align-items:stretch}.mobile-toggle{display:block}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero{padding-top:45px}.portrait-zone{min-height:520px}.stats{margin-top:0}.stats-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.skills{grid-template-columns:1fr 1fr}.contact-buttons{justify-content:flex-start}.portrait-badge{left:0}}
+    @media(max-width:650px){section{padding:72px 0}.container{width:min(calc(100% - 28px),var(--max))}.hero h1{font-size:3.5rem}.portrait-zone{min-height:440px}.portrait-orbit{width:380px;height:380px}.portrait-card{width:320px}.atom{right:0;top:35px;width:80px;height:80px}.portrait-badge{bottom:20px;max-width:180px}.stats-grid,.skills,.edu-grid,.cred-row,.activity-grid,.fit-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.job{grid-template-columns:1fr;gap:7px}.contact{padding:28px}.intro-ui{height:90vh}.intro-bottom{align-items:flex-end}.intro-copy h1{font-size:3.2rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.portrait-orbit{animation:none}.reveal{transition:none}}
+  </style>
+</head>
+<body>
+  <canvas id="scienceCanvas" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div>
+
+  <div id="intro" aria-label="Welcome video">
+    <video id="welcomeVideo" src="welcome.mp4" poster="welcome-poster.jpg" autoplay muted playsinline preload="auto"></video>
+    <div class="intro-ui">
+      <div class="intro-top">
+        <div class="intro-brand"><div class="intro-mark">PS</div><div>PRATHEEKSHA SHAJU<small style="display:block;font:500 .72rem Inter;color:rgba(255,255,255,.7);letter-spacing:.12em">SCIENCE EDUCATOR</small></div></div>
+        <div class="intro-actions"><button class="intro-btn" id="soundBtn">Sound on</button><button class="intro-btn" id="skipBtn">Skip intro</button></div>
+      </div>
+      <div class="intro-bottom">
+        <div class="intro-copy"><span>Welcome to my teaching portfolio</span><h1>Science that inspires curiosity.</h1><p>Science & Biology Teacher · Abu Dhabi, UAE</p></div>
+        <button class="intro-btn" id="enterBtn">Enter portfolio →</button>
+      </div>
+    </div>
+    <div class="intro-progress"><i id="videoProgress"></i></div>
+  </div>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#home"><span class="brand-logo">PS</span><span>Pratheeksha Shaju<small>Science & Biology Teacher</small></span></a>
+      <button class="mobile-toggle" id="menuBtn" aria-label="Open menu">☰</button>
+      <div class="links" id="navLinks">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#activities">Activities</a>
+        <a href="#contact" class="nav-cta">Let's Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal on">
+          <div class="kicker">Science Educator · Abu Dhabi, UAE</div>
+          <h1>Pratheeksha<br><em>Shaju</em></h1>
+          <div class="role">SCIENCE TEACHER · BIOLOGY · ENVIRONMENTAL SCIENCE</div>
+          <p class="hero-copy">Qualified Science Teacher with 3+ years of experience in science education, classroom instruction, curriculum support and educational outreach. B.Ed. in Natural Science, MSc in Environmental Science and BSc in Zoology, with CTET and K-TET qualifications.</p>
+          <div class="chip-row"><span class="chip">Abu Dhabi Based</span><span class="chip">Family Visa</span><span class="chip">Immediate Joiner</span><span class="chip">Primary & Middle School</span></div>
+          <div class="actions"><a class="btn btn-primary" href="Pratheeksha_Shaju_CV.docx" download>↓ Download CV</a><a class="btn btn-secondary" href="#contact">Contact Me</a></div>
+          <button class="replay" id="replayBtn">↻ Replay welcome video</button>
+        </div>
+        <div class="portrait-zone reveal on">
+          <div class="portrait-orbit"></div>
+          <div class="portrait-card"><img src="pratheeksha-shaju.jpg" alt="Pratheeksha Shaju, Science Teacher in Abu Dhabi" /></div>
+          <div class="portrait-badge"><b>Available for UAE Schools</b><small>Primary Science · Middle School Science · General Science</small></div>
+          <div class="atom" aria-hidden="true">⚛</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container stats">
+      <div class="stats-grid glass reveal">
+        <div class="stat"><strong><i>3+</i> Years</strong><span>Science education & outreach</span></div>
+        <div class="stat"><strong><i>CTET</i> Qualified</strong><span>Primary Stage</span></div>
+        <div class="stat"><strong><i>K-TET</i> Category II</strong><span>Kerala Teacher Eligibility Test</span></div>
+        <div class="stat"><strong><i>MSc</i> Environmental Science</strong><span>Strong life-science foundation</span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container split">
+        <div class="reveal"><div class="kicker">About Me</div><h2>Making science meaningful, practical and memorable.</h2><p class="muted">My teaching experience combines classroom instruction, curriculum development and science outreach. I use inquiry, activities, demonstrations and real-world examples to help learners understand science rather than simply memorise it.</p></div>
+        <div class="fit-grid reveal">
+          <div class="fit"><b>UAE Ready</b><small>Currently based in Abu Dhabi on a family visa and available for immediate joining.</small></div>
+          <div class="fit"><b>Science Specialist</b><small>Natural Science, Zoology and Environmental Science academic foundation.</small></div>
+          <div class="fit"><b>Student-Centred</b><small>Differentiated, inquiry-based and activity-led learning approaches.</small></div>
+          <div class="fit"><b>Teaching Credentials</b><small>CTET Primary Stage and K-TET Category II qualified.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container"><div class="kicker reveal">Teaching Strengths</div><h2 class="reveal">Science classroom expertise</h2>
+        <div class="skills">
+          <article class="skill glass reveal"><div class="skill-icon">🧬</div><h3>Science & Biology</h3><p>General Science, Biology and Environmental Science for school-age learners.</p></article>
+          <article class="skill glass reveal"><div class="skill-icon">📘</div><h3>Lesson Planning</h3><p>Structured lessons, learning resources and activities aligned with clear learning objectives.</p></article>
+          <article class="skill glass reveal"><div class="skill-icon">🔬</div><h3>Practical Learning</h3><p>Demonstrations, investigations and hands-on approaches that make scientific concepts visible.</p></article>
+          <article class="skill glass reveal"><div class="skill-icon">🎯</div><h3>Assessment</h3><p>Formative checks, worksheets, progress monitoring and constructive learner feedback.</p></article>
+          <article class="skill glass reveal"><div class="skill-icon">👩‍🏫</div><h3>Classroom Management</h3><p>Positive, inclusive classroom routines with individual attention and learner support.</p></article>
+          <article class="skill glass reveal"><div class="skill-icon">🌱</div><h3>Differentiation</h3><p>Adapting pace, instruction and activities for varied readiness and learning needs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container"><div class="kicker reveal">Professional Experience</div><h2 class="reveal">Teaching & science education journey</h2>
+        <div class="timeline">
+          <article class="job glass reveal"><div class="job-date">FEB 2021 — JUL 2024</div><div><h3>Junior Programme Executive — Science Education</h3><div class="job-org">Mazhavillu: Teach Science for Kerala · Kerala Development & Innovation Strategic Council (K-DISC)</div><ul><li>Delivered science education and learning activities for school-age learners.</li><li>Developed lesson plans, instructional modules and curriculum-aligned science resources.</li><li>Used inquiry-based, experiential and student-centred teaching methods.</li><li>Supported student assessment, mentoring and educational outreach activities.</li></ul></div></article>
+          <article class="job glass reveal"><div class="job-date">FEB 2021 — JUL 2023</div><div><h3>Institutional Assignment — Science Education</h3><div class="job-org">KSCSTE — Kerala Forest Research Institute (KFRI), Peechi, Kerala</div><ul><li>Designed science education content and delivered learning activities to students aged 9–13.</li><li>Developed learning resources covering biodiversity, ecology, environmental science and conservation.</li><li>Conducted workshops and interactive learning sessions in collaboration with educators and scientists.</li></ul></div></article>
+          <article class="job glass reveal"><div class="job-date">JUL 2023 — FEB 2024</div><div><h3>Institutional Assignment — Science Teaching</h3><div class="job-org">Indira Gandhi Memorial Model Residential Higher Secondary School, Nilambur</div><ul><li>Taught Standard 6 students through structured science instruction.</li><li>Planned lessons and learning activities to support understanding, growth and creativity.</li><li>Used practical demonstrations, worksheets, classroom management and assessment activities.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container"><div class="kicker reveal">Education & Credentials</div><h2 class="reveal">Academic foundation for science teaching</h2>
+        <div class="split">
+          <div class="edu-grid">
+            <article class="edu glass reveal"><span class="year">2026</span><h3>B.Ed. — Natural Science</h3><p>Mahatma Gandhi University, Kerala, India</p><span class="score">96.1%</span></article>
+            <article class="edu glass reveal"><span class="year">2020</span><h3>MSc — Environmental Science</h3><p>University of Calicut, Kerala, India</p><span class="score">77.8%</span></article>
+            <article class="edu glass reveal"><span class="year">2018</span><h3>BSc — Zoology</h3><p>University of Calicut, Kerala, India</p><span class="score">79.2%</span></article>
+            <article class="edu glass reveal"><span class="year">2019</span><h3>Diploma — Computer Applications</h3><p>India</p><span class="score">93.8%</span></article>
+          </div>
+          <div class="reveal">
+            <div class="cred-row"><div class="cred"><strong>CTET</strong><span>Primary Stage · Central Board of Secondary Education (CBSE), India</span></div><div class="cred"><strong>K-TET</strong><span>Category II · Department of General Education, Government of Kerala</span></div></div>
+            <div class="panel glass" style="margin-top:16px"><h3>Additional Professional Training</h3><p>Remote Sensing, GIS & GNSS Applications — IIRS/ISRO · GIS Training — Central University of Karnataka · Data Analytics with Python — IIT Roorkee.</p></div>
+            <div class="panel glass" style="margin-top:16px"><h3>Languages</h3><p>English — Fluent · Malayalam — Native · Hindi — Fluent</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities">
+      <div class="container"><div class="kicker reveal">Academic Activities</div><h2 class="reveal">Learning beyond the classroom</h2>
+        <div class="activity-grid">
+          <article class="activity glass reveal"><time>3–5 MAY 2023</time><h3>General Education Seminar</h3><p>5th International Congress on Kerala Studies.</p></article>
+          <article class="activity glass reveal"><time>8–10 NOV 2023</time><h3>Workshop for MRS Students of Kerala</h3><p>KSCSTE — Kerala Forest Research Institute, Peechi.</p></article>
+          <article class="activity glass reveal"><time>POSTGRADUATE RESEARCH</time><h3>Chalakudy River Basin</h3><p>MSc dissertation at the National Centre for Earth Science Studies (NCESS).</p></article>
+          <article class="activity glass reveal"><time>UNDERGRADUATE RESEARCH</time><h3>Spider Diversity Survey</h3><p>Research project focused on spider diversity in mangrove ecosystems.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact reveal"><div class="contact-grid"><div><div class="kicker">Abu Dhabi · UAE</div><h2>Open to Science & Biology teaching opportunities.</h2><p>Available for Primary Science, Middle School Science, General Science and suitable Biology teaching roles. Currently based in Abu Dhabi on a family visa and available for immediate joining.</p></div><div class="contact-buttons"><a class="btn btn-primary" href="mailto:pratheekshashaju123@gmail.com">✉ Email Me</a><a class="btn btn-secondary" href="tel:+971581739058">☎ Call</a><a class="btn btn-secondary" href="Pratheeksha_Shaju_ATS_CV.docx" download>↓ ATS CV</a></div></div></div>
+    </section>
+  </main>
+
+  <footer><div class="container">© 2026 Pratheeksha Shaju · Science & Biology Teacher · Abu Dhabi, UAE<div class="footer-links"><a href="mailto:pratheekshashaju123@gmail.com">pratheekshashaju123@gmail.com</a><a href="tel:+971581739058">+971 58 173 9058</a></div></div></footer>
+
+<script>
+  const intro=document.getElementById('intro'),video=document.getElementById('welcomeVideo'),progress=document.getElementById('videoProgress');
+  const closeIntro=()=>{intro.classList.add('hidden');document.body.style.overflow=''};
+  const openIntro=()=>{intro.classList.remove('hidden');document.body.style.overflow='hidden';video.currentTime=0;video.muted=true;video.play().catch(()=>{});document.getElementById('soundBtn').textContent='Sound on'};
+  document.body.style.overflow='hidden';
+  video.addEventListener('timeupdate',()=>{if(video.duration)progress.style.width=(video.currentTime/video.duration*100)+'%'});
+  video.addEventListener('ended',()=>setTimeout(closeIntro,450));
+  document.getElementById('skipBtn').onclick=closeIntro;document.getElementById('enterBtn').onclick=closeIntro;
+  document.getElementById('soundBtn').onclick=e=>{video.muted=!video.muted;e.currentTarget.textContent=video.muted?'Sound on':'Sound off';if(video.paused)video.play()};
+  document.getElementById('replayBtn').onclick=openIntro;
+
+  const menu=document.getElementById('navLinks');document.getElementById('menuBtn').onclick=()=>menu.classList.toggle('open');
+  [...menu.querySelectorAll('a')].forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Lightweight science-particle background: molecules + links
+  const c=document.getElementById('scienceCanvas'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),pts=[];
+  function resize(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';x.setTransform(dpr,0,0,dpr,0,0);const n=Math.min(70,Math.floor(W/18));pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.7+.7,t:Math.random()>.76?1:0}))}
+  function draw(){x.clearRect(0,0,W,H);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r+(p.t?1.2:0),0,Math.PI*2);x.fillStyle=p.t?'rgba(115,230,164,.42)':'rgba(99,230,255,.24)';x.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<118){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle=`rgba(90,185,215,${.055*(1-d/118)})`;x.stroke()}}requestAnimationFrame(draw)}
+  addEventListener('resize',resize);resize();draw();
+</script>
+</body>
+</html>
