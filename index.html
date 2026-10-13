@@ -85,6 +85,9 @@
     .portrait-media video{z-index:1;opacity:1}
     .portrait-media img{z-index:0;opacity:1}
     .portrait-media.show-photo video{opacity:0}
+    .pv-sound{position:absolute;z-index:3;right:12px;bottom:12px;border:1px solid rgba(255,255,255,.4);background:rgba(4,16,26,.62);color:#fff;padding:8px 13px;border-radius:999px;font-size:.8rem;font-weight:700;cursor:pointer;backdrop-filter:blur(10px);transition:opacity .4s,border-color .2s,color .2s}
+    .pv-sound:hover{border-color:var(--cyan);color:var(--cyan)}
+    .portrait-media.show-photo .pv-sound{opacity:0;pointer-events:none}
 
     .portrait-badge{position:absolute;left:-40px;bottom:55px;padding:15px 17px;border-radius:18px;background:rgba(5,22,36,.88);border:1px solid rgba(115,230,164,.32);box-shadow:var(--shadow);backdrop-filter:blur(12px);max-width:215px}.portrait-badge b{display:block;color:var(--bio);font-family:"Space Grotesk"}.portrait-badge small{color:#a8bbc9}
     .atom{position:absolute;right:-18px;top:62px;width:112px;height:112px;border-radius:50%;border:1px solid rgba(99,230,255,.23);display:grid;place-items:center;color:var(--cyan);font-size:2rem;background:rgba(7,25,40,.55);box-shadow:0 0 45px rgba(99,230,255,.11);backdrop-filter:blur(12px)}
@@ -155,7 +158,8 @@
           <div class="portrait-card">
             <div class="portrait-media" id="portraitMedia">
               <img src="pratheeksha-shaju.jpg" alt="Pratheeksha Shaju, Science Teacher in Abu Dhabi" />
-              <video id="profileVideo" src="profile-video.mp4" poster="pratheeksha-shaju.jpg" muted playsinline preload="auto"></video>
+              <video id="profileVideo" src="profile-video.mp4" poster="pratheeksha-shaju.jpg" playsinline preload="auto"></video>
+              <button class="pv-sound" id="pvSound" type="button" aria-label="Toggle profile video sound">🔊 Sound on</button>
             </div>
           </div>
           <div class="portrait-badge"><b>Available for UAE Schools</b><small>Primary Science · Middle School Science · General Science</small></div>
@@ -248,7 +252,16 @@
   /* PROFILE VIDEO -> PHOTO (plays in the portrait frame, then fades to the photo) */
   const pv=document.getElementById('profileVideo'),pm=document.getElementById('portraitMedia');
   const showPhoto=()=>pm.classList.add('show-photo');
-  const playProfile=()=>{pm.classList.remove('show-photo');pv.currentTime=0;const p=pv.play();if(p&&p.catch)p.catch(showPhoto)};
+  const pvBtn=document.getElementById('pvSound');
+  const syncPvBtn=()=>{pvBtn.textContent=pv.muted?'🔇 Tap for sound':'🔊 Sound on'};
+  /* Try to play WITH sound first (works after the visitor clicks Skip / Enter).
+     If the browser blocks it, fall back to muted and show the "Tap for sound" button. */
+  const playProfile=()=>{
+    pm.classList.remove('show-photo');pv.currentTime=0;pv.muted=false;syncPvBtn();
+    const p=pv.play();
+    if(p&&p.catch)p.catch(()=>{pv.muted=true;syncPvBtn();const q=pv.play();if(q&&q.catch)q.catch(showPhoto)});
+  };
+  pvBtn.addEventListener('click',()=>{pv.muted=!pv.muted;syncPvBtn();if(pv.paused&&!pm.classList.contains('show-photo'))pv.play().catch(()=>{})});
   pv.addEventListener('ended',showPhoto);
   pv.addEventListener('error',showPhoto);
 
