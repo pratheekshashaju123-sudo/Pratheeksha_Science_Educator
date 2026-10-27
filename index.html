@@ -1,300 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YC8H32CX1J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YC8H32CX1J');
-</script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="description" content="Pratheeksha Shaju — Science & Biology Teacher based in Abu Dhabi, UAE. B.Ed Natural Science, MSc Environmental Science, BSc Zoology, CTET and K-TET qualified." />
-  <meta name="keywords" content="Science Teacher Abu Dhabi, Biology Teacher UAE, Primary Science Teacher, Middle School Science Teacher, CTET Teacher UAE, K-TET Teacher, Environmental Science Teacher" />
-  <meta name="theme-color" content="#071626" />
-  <meta property="og:title" content="Pratheeksha Shaju | Science & Biology Teacher — Abu Dhabi" />
-  <meta property="og:description" content="Science educator in Abu Dhabi with 3+ years of science education, classroom instruction, curriculum support and outreach experience." />
-  <meta property="og:image" content="pratheeksha-shaju.jpg" />
-  <title>Pratheeksha Shaju | Science & Biology Teacher | Abu Dhabi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --bg:#050d17;--bg2:#071626;--panel:rgba(11,28,46,.72);--panel2:rgba(13,36,57,.82);
-      --text:#eef7ff;--muted:#9bb0c3;--cyan:#63e6ff;--cyan2:#1bb8e8;--bio:#73e6a4;
-      --gold:#f2c66d;--line:rgba(135,202,228,.18);--shadow:0 22px 70px rgba(0,0,0,.38);
-      --max:1180px;
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:86px}
-    body{margin:0;background:radial-gradient(circle at 75% 10%,rgba(25,124,165,.12),transparent 34%),linear-gradient(180deg,#050d17,#071626 42%,#06101d);color:var(--text);font:500 16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
-    a{color:inherit;text-decoration:none} button{font:inherit} img{max-width:100%;display:block}
-    ::selection{background:var(--cyan);color:#002232}
-    #scienceCanvas{position:fixed;inset:0;z-index:-2;width:100%;height:100%;opacity:.72}
-    .noise{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
-    .container{width:min(calc(100% - 38px),var(--max));margin:auto}
-
-    /* INTRO VIDEO */
-    #intro{position:fixed;inset:0;z-index:1000;background:#03070c;display:grid;place-items:center;transition:opacity .75s ease,visibility .75s ease}
-    #intro.hidden{opacity:0;visibility:hidden;pointer-events:none}
-    #intro video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    #intro:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,9,16,.12),rgba(3,9,16,.06) 48%,rgba(3,9,16,.75))}
-    .intro-ui{position:relative;z-index:2;width:min(92%,1120px);height:min(88vh,760px);display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
-    .intro-top,.intro-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;pointer-events:auto}
-    .intro-brand{display:flex;align-items:center;gap:13px;color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.04em;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-    .intro-mark{width:47px;height:47px;border:1px solid rgba(99,230,255,.7);border-radius:14px;display:grid;place-items:center;background:rgba(4,18,29,.34);backdrop-filter:blur(12px);box-shadow:0 0 30px rgba(99,230,255,.18)}
-    .intro-actions{display:flex;gap:10px;flex-wrap:wrap}
-    .intro-btn{border:1px solid rgba(255,255,255,.38);background:rgba(4,16,26,.42);color:#fff;padding:10px 14px;border-radius:999px;cursor:pointer;backdrop-filter:blur(10px);transition:.2s}
-    .intro-btn:hover{border-color:var(--cyan);color:var(--cyan)}
-    .intro-copy{max-width:720px;text-shadow:0 3px 22px rgba(0,0,0,.65)}
-    .intro-copy span{display:inline-block;color:var(--cyan);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.77rem;margin-bottom:8px}
-    .intro-copy h1{margin:0 0 8px;font:700 clamp(2.2rem,6vw,5.6rem)/.95 "Space Grotesk",sans-serif;letter-spacing:-.055em}
-    .intro-copy p{margin:0;color:rgba(255,255,255,.82);font-size:clamp(.9rem,1.7vw,1.15rem)}
-    .intro-progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:3}.intro-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--bio),var(--gold));box-shadow:0 0 18px var(--cyan)}
-
-    /* NAV */
-    nav{position:sticky;top:0;z-index:50;background:rgba(5,13,23,.72);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
-    .nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-weight:700}
-    .brand-logo{width:42px;height:42px;border-radius:13px;border:1px solid rgba(99,230,255,.55);display:grid;place-items:center;color:var(--cyan);background:linear-gradient(145deg,rgba(99,230,255,.12),rgba(115,230,164,.05));box-shadow:0 0 24px rgba(99,230,255,.09)}
-    .brand small{display:block;color:var(--muted);font:500 .71rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
-    .links{display:flex;align-items:center;gap:26px;color:#bfd0de;font-size:.91rem}.links a{position:relative}.links a:not(.nav-cta):after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:var(--cyan);transition:.22s}.links a:hover:after{right:0}
-    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:11px 17px;font-weight:800;border:1px solid transparent;transition:.22s;cursor:pointer}
-    .nav-cta{border-color:rgba(99,230,255,.45);color:var(--cyan);background:rgba(99,230,255,.06)}
-    .nav-cta:hover{background:var(--cyan);color:#02202d;box-shadow:0 0 26px rgba(99,230,255,.3)}
-    .mobile-toggle{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
-
-    section{padding:96px 0}.kicker{display:flex;align-items:center;gap:10px;color:var(--cyan);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.2em;margin-bottom:12px}.kicker:before{content:"";width:30px;height:1px;background:var(--cyan)}
-    h2{font:700 clamp(2.1rem,4vw,3.5rem)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:0 0 18px} .muted{color:var(--muted)}
-    .glass{background:linear-gradient(145deg,rgba(12,31,50,.76),rgba(6,20,34,.68));border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(16px)}
-
-    /* HERO */
-    .hero{min-height:calc(100vh - 78px);display:flex;align-items:center;padding:64px 0 76px;position:relative;overflow:hidden}
-    .hero:before{content:"";position:absolute;right:-10%;top:5%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.11),transparent 65%);filter:blur(4px);pointer-events:none}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:center}
-    .hero h1{margin:0 0 15px;font:700 clamp(3.1rem,7vw,6.7rem)/.88 "Space Grotesk",sans-serif;letter-spacing:-.065em}
-    .hero h1 em{font-style:normal;color:transparent;background:linear-gradient(95deg,var(--cyan),#b9f5ff 47%,var(--bio));background-clip:text;-webkit-background-clip:text}
-    .role{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:.84rem;font-weight:800;margin-bottom:22px}
-    .hero-copy{font-size:1.08rem;color:#b6c8d6;max-width:680px;margin:0 0 25px}
-    .chip-row{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 29px}.chip{padding:8px 12px;border-radius:999px;border:1px solid rgba(115,230,164,.28);background:rgba(115,230,164,.06);color:#b8f6d1;font-size:.83rem}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn-primary{background:linear-gradient(100deg,var(--gold),#ffd98b);color:#201604}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(242,198,109,.2)}.btn-secondary{border-color:rgba(99,230,255,.38);color:var(--cyan);background:rgba(99,230,255,.04)}.btn-secondary:hover{background:rgba(99,230,255,.11);transform:translateY(-2px)}
-    .replay{margin-top:18px;border:0;background:none;color:#7f99ac;cursor:pointer;padding:0}.replay:hover{color:var(--cyan)}
-
-    .portrait-zone{position:relative;min-height:610px;display:grid;place-items:center}
-    .portrait-orbit{position:absolute;width:510px;height:510px;border:1px solid rgba(99,230,255,.18);border-radius:50%;animation:spin 28s linear infinite}.portrait-orbit:before,.portrait-orbit:after{content:"";position:absolute;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}.portrait-orbit:before{width:8px;height:8px;left:50%;top:-4px}.portrait-orbit:after{width:6px;height:6px;right:12%;bottom:9%;background:var(--bio);box-shadow:0 0 14px var(--bio)}@keyframes spin{to{transform:rotate(360deg)}}
-    .portrait-card{position:relative;width:min(430px,90%);border-radius:38px;padding:13px;background:linear-gradient(145deg,rgba(120,224,255,.17),rgba(7,22,36,.55));border:1px solid rgba(99,230,255,.28);box-shadow:0 30px 90px rgba(0,0,0,.46),0 0 55px rgba(99,230,255,.08)}
-    .portrait-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;filter:saturate(.94) contrast(1.03)}
-
-    /* PORTRAIT VIDEO -> PHOTO */
-    .portrait-media{position:relative;width:100%;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#06121e}
-    .portrait-media video,.portrait-media img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;border-radius:28px;transition:opacity .8s ease}
-    .portrait-media video{z-index:1;opacity:1}
-    .portrait-media img{z-index:0;opacity:1}
-    .portrait-media.show-photo video{opacity:0}
-    .pv-sound{position:absolute;z-index:3;right:12px;bottom:12px;border:1px solid rgba(255,255,255,.4);background:rgba(4,16,26,.62);color:#fff;padding:8px 13px;border-radius:999px;font-size:.8rem;font-weight:700;cursor:pointer;backdrop-filter:blur(10px);transition:opacity .4s,border-color .2s,color .2s}
-    .pv-sound:hover{border-color:var(--cyan);color:var(--cyan)}
-    .portrait-media.show-photo .pv-sound{opacity:0;pointer-events:none}
-
-    .portrait-badge{position:absolute;left:-40px;bottom:55px;padding:15px 17px;border-radius:18px;background:rgba(5,22,36,.88);border:1px solid rgba(115,230,164,.32);box-shadow:var(--shadow);backdrop-filter:blur(12px);max-width:215px}.portrait-badge b{display:block;color:var(--bio);font-family:"Space Grotesk"}.portrait-badge small{color:#a8bbc9}
-    .atom{position:absolute;right:-18px;top:62px;width:112px;height:112px;border-radius:50%;border:1px solid rgba(99,230,255,.23);display:grid;place-items:center;color:var(--cyan);font-size:2rem;background:rgba(7,25,40,.55);box-shadow:0 0 45px rgba(99,230,255,.11);backdrop-filter:blur(12px)}
-
-    .stats{margin-top:-38px;position:relative;z-index:5}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-radius:24px;overflow:hidden}.stat{padding:23px 24px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat strong{display:block;font:700 1.35rem "Space Grotesk";color:#fff}.stat span{display:block;color:var(--muted);font-size:.82rem;margin-top:4px}.stat i{font-style:normal;color:var(--cyan);margin-right:7px}
-
-    /* CONTENT */
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.panel{border-radius:24px;padding:29px}.panel h3{font:700 1.15rem "Space Grotesk";margin:0 0 9px}.panel p{color:#afc1cf;margin:0}
-    .fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.fit{border-radius:18px;padding:18px;background:rgba(9,28,45,.6);border:1px solid var(--line)}.fit b{display:block;color:#fff;margin-bottom:5px}.fit small{color:var(--muted)}
-    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{border-radius:21px;padding:22px;min-height:176px;position:relative;overflow:hidden}.skill:after{content:"";position:absolute;width:110px;height:110px;right:-45px;bottom:-45px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.13),transparent 68%)}.skill-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:rgba(99,230,255,.08);border:1px solid rgba(99,230,255,.2);font-size:1.25rem;margin-bottom:14px}.skill h3{font:700 1.02rem "Space Grotesk";margin:0 0 7px}.skill p{font-size:.9rem;color:var(--muted);margin:0}
-    .timeline{display:grid;gap:18px}.job{display:grid;grid-template-columns:175px 1fr;gap:27px;border-radius:22px;padding:25px}.job-date{font-size:.82rem;color:var(--cyan);font-weight:800;letter-spacing:.06em}.job h3{font:700 1.12rem "Space Grotesk";margin:0 0 5px}.job-org{color:var(--gold);font-size:.9rem;margin-bottom:10px}.job ul{margin:0;padding-left:18px;color:#aebfcc;font-size:.93rem}.job li+li{margin-top:5px}
-    .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.edu{border-radius:21px;padding:23px}.edu .year{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.08em}.edu h3{font:700 1.06rem "Space Grotesk";margin:5px 0 3px}.edu p{margin:0;color:var(--muted);font-size:.9rem}.edu .score{color:var(--bio);font-weight:800;margin-top:8px;display:block;font-size:.86rem}
-    .cred-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.cred{border-radius:20px;padding:22px;background:linear-gradient(145deg,rgba(115,230,164,.08),rgba(12,31,50,.64));border:1px solid rgba(115,230,164,.22)}.cred strong{display:block;font:700 1.15rem "Space Grotesk";color:#d7ffe6}.cred span{font-size:.87rem;color:var(--muted)}
-    .activity-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.activity{border-radius:20px;padding:21px}.activity time{color:var(--gold);font-size:.77rem;font-weight:800}.activity h3{font:700 1rem "Space Grotesk";margin:7px 0 3px}.activity p{margin:0;color:var(--muted);font-size:.88rem}
-
-    .contact{border-radius:30px;padding:42px;background:linear-gradient(120deg,rgba(9,42,64,.94),rgba(7,26,44,.94));border:1px solid rgba(99,230,255,.24);position:relative;overflow:hidden}.contact:after{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.15),transparent 65%)}.contact-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.contact p{color:#b3c4d1;max-width:650px}.contact-buttons{display:flex;gap:11px;justify-content:flex-end;flex-wrap:wrap}
-    footer{padding:29px 0 45px;color:#7890a3;font-size:.86rem;text-align:center}.footer-links{margin-top:8px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--cyan)}
-    .reveal{opacity:0;transform:translateY(20px);transition:.65s ease}.reveal.on{opacity:1;transform:none}
-
-    @media(max-width:980px){.links{display:none}.links.open{display:flex;position:absolute;left:18px;right:18px;top:70px;background:rgba(5,13,23,.97);border:1px solid var(--line);border-radius:20px;padding:20px;flex-direction:column;align-items:stretch}.mobile-toggle{display:block}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero{padding-top:45px}.portrait-zone{min-height:520px}.stats{margin-top:0}.stats-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.skills{grid-template-columns:1fr 1fr}.contact-buttons{justify-content:flex-start}.portrait-badge{left:0}}
-    @media(max-width:650px){section{padding:72px 0}.container{width:min(calc(100% - 28px),var(--max))}.hero h1{font-size:3.5rem}.portrait-zone{min-height:440px}.portrait-orbit{width:380px;height:380px}.portrait-card{width:320px}.atom{right:0;top:35px;width:80px;height:80px}.portrait-badge{bottom:20px;max-width:180px}.stats-grid,.skills,.edu-grid,.cred-row,.activity-grid,.fit-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.job{grid-template-columns:1fr;gap:7px}.contact{padding:28px}.intro-ui{height:90vh}.intro-bottom{align-items:flex-end}.intro-copy h1{font-size:3.2rem}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.portrait-orbit{animation:none}.reveal{transition:none}}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#081720">
+  <meta name="description" content="Pratheeksha Shaju is a Science and Biology educator in Abu Dhabi, UAE, with 3+ years of experience in classroom learning, environmental science outreach, and inquiry-led education. B.Ed, MSc, BSc, CTET and K-TET qualified.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pratheeksha Shaju | Science & Biology Educator">
+  <meta property="og:description" content="Teaching science through curiosity, discovery and meaningful real-world connections. Explore Pratheeksha's experience, teaching approach and academic credentials.">
+  <meta property="og:url" content="https://pratheeksha.professionals-cv.in/">
+  <meta property="og:image" content="https://pratheeksha.professionals-cv.in/assets/images/portrait.webp">
+  <title>Pratheeksha Shaju — Science & Biology Educator | Abu Dhabi</title>
+  <link rel="canonical" href="https://pratheeksha.professionals-cv.in/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/images/portrait.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/site.css?v=2">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC8H32CX1J"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-YC8H32CX1J');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Pratheeksha Shaju","url":"https://pratheeksha.professionals-cv.in/","jobTitle":"Science and Biology Teacher","description":"Science educator with experience in classroom teaching, science education programmes, and environmental learning.","address":{"@type":"PostalAddress","addressLocality":"Abu Dhabi","addressCountry":"AE"},"knowsAbout":["Science Education","Biology","Environmental Science","Natural Science","Inquiry-based Learning"]}</script>
+  <script defer src="assets/js/site.js?v=2"></script>
 </head>
 <body>
-  <canvas id="scienceCanvas" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div>
-
-  <div id="intro" aria-label="Welcome video">
-    <video id="welcomeVideo" src="welcome.mp4" poster="welcome-poster.jpg" autoplay muted playsinline preload="auto"></video>
-    <div class="intro-ui">
-      <div class="intro-top">
-        <div class="intro-brand"><div class="intro-mark">PS</div><div>PRATHEEKSHA SHAJU<small style="display:block;font:500 .72rem Inter;color:rgba(255,255,255,.7);letter-spacing:.12em">SCIENCE EDUCATOR</small></div></div>
-        <div class="intro-actions"><button class="intro-btn" id="soundBtn">Sound on</button><button class="intro-btn" id="skipBtn">Skip intro</button></div>
-      </div>
-      <div class="intro-bottom">
-        <div class="intro-copy"><span>Welcome to my teaching portfolio</span><h1>Science that inspires curiosity.</h1><p>Science & Biology Teacher · Abu Dhabi, UAE</p></div>
-        <button class="intro-btn" id="enterBtn">Enter portfolio →</button>
-      </div>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+    <div class="shell nav-grid">
+      <a class="brand" href="#home" aria-label="Pratheeksha Shaju - home"><span class="brand-icon">PS<span>.</span></span><span class="brand-type"><strong>PRATHEEKSHA SHAJU</strong><small>SCIENCE EDUCATOR</small></span></a>
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#specialisms">Specialisms</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions"><button class="icon-button" id="themeToggle" title="Switch colour theme" aria-label="Switch colour theme" type="button">☼</button><a href="Pratheeksha_Shaju_CV.docx" download class="button nav-download">Download CV <span>↓</span></a><button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button></div>
     </div>
-    <div class="intro-progress"><i id="videoProgress"></i></div>
-  </div>
-
-  <nav>
-    <div class="container nav-inner">
-      <a class="brand" href="#home"><span class="brand-logo">PS</span><span>Pratheeksha Shaju<small>Science & Biology Teacher</small></span></a>
-      <button class="mobile-toggle" id="menuBtn" aria-label="Open menu">☰</button>
-      <div class="links" id="navLinks">
-        <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#activities">Activities</a>
-        <a href="#contact" class="nav-cta">Let's Connect</a>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="reveal on">
-          <div class="kicker">Science Educator · Abu Dhabi, UAE</div>
-          <h1>Pratheeksha<br><em>Shaju</em></h1>
-          <div class="role">SCIENCE TEACHER · BIOLOGY · ENVIRONMENTAL SCIENCE</div>
-          <p class="hero-copy">Qualified Science Teacher with 3+ years of experience in science education, classroom instruction, curriculum support and educational outreach. B.Ed. in Natural Science, MSc in Environmental Science and BSc in Zoology, with CTET and K-TET qualifications.</p>
-          <div class="chip-row"><span class="chip">Abu Dhabi Based</span><span class="chip">Family Visa</span><span class="chip">Immediate Joiner</span><span class="chip">Primary & Middle School</span></div>
-          <div class="actions"><a class="btn btn-primary" href="Pratheeksha_Shaju_CV.docx" download>↓ Download CV</a><a class="btn btn-secondary" href="#contact">Contact Me</a></div>
-          <button class="replay" id="replayBtn">↻ Replay welcome video</button>
-        </div>
-        <div class="portrait-zone reveal on">
-          <div class="portrait-orbit"></div>
-          <div class="portrait-card">
-            <div class="portrait-media" id="portraitMedia">
-              <img src="pratheeksha-shaju.jpg" alt="Pratheeksha Shaju, Science Teacher in Abu Dhabi" />
-              <video id="profileVideo" src="profile-video.mp4" poster="pratheeksha-shaju.jpg" playsinline preload="auto"></video>
-              <button class="pv-sound" id="pvSound" type="button" aria-label="Toggle profile video sound">🔊 Sound on</button>
-            </div>
-          </div>
-          <div class="portrait-badge"><b>Available for UAE Schools</b><small>Primary Science · Middle School Science · General Science</small></div>
-          <div class="atom" aria-hidden="true">⚛</div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-label="Welcome to Pratheeksha's science education portfolio">
+      <div class="hero-media" aria-hidden="true"><video id="heroVideo" playsinline preload="metadata" poster="assets/images/welcome-poster.webp" disablepictureinpicture disableremoteplayback><source src="welcome.mp4" type="video/mp4"></video></div>
+      <div class="hero-grade" aria-hidden="true"></div>
+      <div class="shell hero-layout">
+        <div class="hero-content reveal visible">
+          <div class="eyebrow"><span class="eyebrow-stroke"></span> CURIOSITY • DISCOVERY • GROWTH</div>
+          <h1>Science begins<br>with <em>curiosity.</em></h1>
+          <p class="hero-intro">I'm <strong>Pratheeksha Shaju</strong>, a Science &amp; Biology educator who brings classroom learning to life through exploration, evidence, and real-world connections.</p>
+          <div class="hero-tags"><span>Natural Science</span><span>Biology</span><span>Environmental Learning</span></div>
+          <div class="hero-buttons"><a href="#approach" class="button button-primary">Explore my teaching approach <span>↗</span></a><button type="button" class="button button-video" id="playSound">▶ Play welcome with sound</button></div>
+          <div class="hero-location"><span class="status-dot"></span> Based in Abu Dhabi, UAE <span class="hero-separator">/</span> Science teaching opportunities</div>
         </div>
       </div>
+      <div class="shell hero-controls"><div class="video-state" id="videoStatus" role="status" aria-live="polite">Welcome video · plays once</div><button class="sound-toggle" id="soundToggle" type="button" aria-label="Play welcome video with sound">♪ Sound on</button></div>
+      <div class="shell scroll-cue"><span>SCROLL TO EXPLORE</span><span class="cue-line"></span><span>↓</span></div>
     </section>
 
-    <div class="container stats">
-      <div class="stats-grid glass reveal">
-        <div class="stat"><strong><i>3+</i> Years</strong><span>Science education & outreach</span></div>
-        <div class="stat"><strong><i>CTET</i> Qualified</strong><span>Primary Stage</span></div>
-        <div class="stat"><strong><i>K-TET</i> Category II</strong><span>Kerala Teacher Eligibility Test</span></div>
-        <div class="stat"><strong><i>MSc</i> Environmental Science</strong><span>Strong life-science foundation</span></div>
-      </div>
+    <div class="shell facts-grid" aria-label="Teaching and academic highlights">
+      <div class="fact"><strong>03<span>+</span></strong><p>Years in science education<br>and student learning</p></div>
+      <div class="fact"><strong>02</strong><p>National &amp; state teacher<br>eligibility credentials</p></div>
+      <div class="fact"><strong>03</strong><p>Academic degrees in<br>science and education</p></div>
+      <div class="fact fact-special"><span class="micro-label">THE MINDSET</span><p>Inspire questions.<br><b>Build understanding.</b></p></div>
     </div>
 
-    <section id="about">
-      <div class="container split">
-        <div class="reveal"><div class="kicker">About Me</div><h2>Making science meaningful, practical and memorable.</h2><p class="muted">My teaching experience combines classroom instruction, curriculum development and science outreach. I use inquiry, activities, demonstrations and real-world examples to help learners understand science rather than simply memorise it.</p></div>
-        <div class="fit-grid reveal">
-          <div class="fit"><b>UAE Ready</b><small>Currently based in Abu Dhabi on a family visa and available for immediate joining.</small></div>
-          <div class="fit"><b>Science Specialist</b><small>Natural Science, Zoology and Environmental Science academic foundation.</small></div>
-          <div class="fit"><b>Student-Centred</b><small>Differentiated, inquiry-based and activity-led learning approaches.</small></div>
-          <div class="fit"><b>Teaching Credentials</b><small>CTET Primary Stage and K-TET Category II qualified.</small></div>
+    <section class="section about-section" id="about">
+      <div class="shell about-grid">
+        <div class="portrait-wrap reveal"><div class="portrait-graphic" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="floating-cross">✳</span></div><div class="portrait-window"><img src="assets/images/portrait.webp" width="850" height="1062" loading="eager" alt="Pratheeksha Shaju, science and biology educator"></div><div class="portrait-note"><span class="note-icon">✦</span><span><b>Science made relatable</b><small>Learn by asking, trying and discovering</small></span></div></div>
+        <div class="about-copy reveal"><div class="section-marker">01 <i></i> ABOUT THE EDUCATOR</div><h2>Teaching with purpose.<br><span>Learning with wonder.</span></h2><p class="section-lead">A science classroom should feel like a place where questions are welcome and discoveries are possible.</p><p>With a B.Ed. in Natural Science, an MSc in Environmental Science and a BSc in Zoology, I bring a broad scientific foundation to student-centred learning. My professional experience includes classroom instruction, curriculum support and science outreach programmes.</p><p>I enjoy helping learners connect scientific ideas to the environment around them, whether through investigation, collaborative activities or everyday examples.</p>
+          <div class="about-values"><div><span>01</span><b>Inquiry first</b><small>Encourage questions and scientific reasoning</small></div><div><span>02</span><b>Every learner</b><small>Adapt teaching to individual needs</small></div><div><span>03</span><b>Beyond textbooks</b><small>Make concepts practical and memorable</small></div></div>
+          <a class="inline-link" href="#experience">Discover my professional journey <span>↗</span></a>
         </div>
       </div>
     </section>
 
-    <section id="skills">
-      <div class="container"><div class="kicker reveal">Teaching Strengths</div><h2 class="reveal">Science classroom expertise</h2>
-        <div class="skills">
-          <article class="skill glass reveal"><div class="skill-icon">🧬</div><h3>Science & Biology</h3><p>General Science, Biology and Environmental Science for school-age learners.</p></article>
-          <article class="skill glass reveal"><div class="skill-icon">📘</div><h3>Lesson Planning</h3><p>Structured lessons, learning resources and activities aligned with clear learning objectives.</p></article>
-          <article class="skill glass reveal"><div class="skill-icon">🔬</div><h3>Practical Learning</h3><p>Demonstrations, investigations and hands-on approaches that make scientific concepts visible.</p></article>
-          <article class="skill glass reveal"><div class="skill-icon">🎯</div><h3>Assessment</h3><p>Formative checks, worksheets, progress monitoring and constructive learner feedback.</p></article>
-          <article class="skill glass reveal"><div class="skill-icon">👩‍🏫</div><h3>Classroom Management</h3><p>Positive, inclusive classroom routines with individual attention and learner support.</p></article>
-          <article class="skill glass reveal"><div class="skill-icon">🌱</div><h3>Differentiation</h3><p>Adapting pace, instruction and activities for varied readiness and learning needs.</p></article>
-        </div>
+    <section class="section disciplines-section" id="specialisms"><div class="shell">
+      <div class="section-heading"><div><div class="section-marker">02 <i></i> SUBJECT EXPERTISE</div><h2>Connecting concepts<br><span>to the world around us.</span></h2></div><p>Explore the subject areas I bring into teaching and learning, supported by my studies and work in science education.</p></div>
+      <div class="subject-layout"><div class="subject-tabs" role="tablist" aria-label="Select subject area">
+        <button class="subject-tab active" type="button" role="tab" aria-selected="true" tabindex="0" data-subject="science"><span class="subject-index">01</span><span class="subject-label"><strong>General Science</strong><small>Observe · Question · Explain</small></span><span class="subject-arrow">↗</span></button>
+        <button class="subject-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-subject="biology"><span class="subject-index">02</span><span class="subject-label"><strong>Biology &amp; Life Science</strong><small>Living systems · Diversity</small></span><span class="subject-arrow">↗</span></button>
+        <button class="subject-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-subject="environment"><span class="subject-index">03</span><span class="subject-label"><strong>Environmental Science</strong><small>Ecology · Sustainability</small></span><span class="subject-arrow">↗</span></button>
+        <button class="subject-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-subject="practical"><span class="subject-index">04</span><span class="subject-label"><strong>Practical Discovery</strong><small>Demonstrate · Experiment</small></span><span class="subject-arrow">↗</span></button>
       </div>
-    </section>
-
-    <section id="experience">
-      <div class="container"><div class="kicker reveal">Professional Experience</div><h2 class="reveal">Teaching & science education journey</h2>
-        <div class="timeline">
-          <article class="job glass reveal"><div class="job-date">FEB 2021 — JUL 2024</div><div><h3>Junior Programme Executive — Science Education</h3><div class="job-org">Mazhavillu: Teach Science for Kerala · Kerala Development & Innovation Strategic Council (K-DISC)</div><ul><li>Delivered science education and learning activities for school-age learners.</li><li>Developed lesson plans, instructional modules and curriculum-aligned science resources.</li><li>Used inquiry-based, experiential and student-centred teaching methods.</li><li>Supported student assessment, mentoring and educational outreach activities.</li></ul></div></article>
-          <article class="job glass reveal"><div class="job-date">FEB 2021 — JUL 2023</div><div><h3>Institutional Assignment — Science Education</h3><div class="job-org">KSCSTE — Kerala Forest Research Institute (KFRI), Peechi, Kerala</div><ul><li>Designed science education content and delivered learning activities to students aged 9–13.</li><li>Developed learning resources covering biodiversity, ecology, environmental science and conservation.</li><li>Conducted workshops and interactive learning sessions in collaboration with educators and scientists.</li></ul></div></article>
-          <article class="job glass reveal"><div class="job-date">JUL 2023 — FEB 2024</div><div><h3>Institutional Assignment — Science Teaching</h3><div class="job-org">Indira Gandhi Memorial Model Residential Higher Secondary School, Nilambur</div><ul><li>Taught Standard 6 students through structured science instruction.</li><li>Planned lessons and learning activities to support understanding, growth and creativity.</li><li>Used practical demonstrations, worksheets, classroom management and assessment activities.</li></ul></div></article>
-        </div>
+      <div class="subject-feature" id="subjectPanel" role="tabpanel" aria-live="polite"><div class="feature-top"><span class="live-mark"></span> INTERACTIVE SUBJECT EXPLORER</div><div class="subject-visual" id="subjectVisual" data-visual="science" aria-hidden="true"><div class="science-graphic"><span class="graphic-rim graphic-rim-a"></span><span class="graphic-rim graphic-rim-b"></span><span class="graphic-core">✳</span><span class="graphic-speck speck-one"></span><span class="graphic-speck speck-two"></span><span class="graphic-speck speck-three"></span></div><span class="visual-caption" id="visualCaption">EXPLORE • UNDERSTAND • APPLY</span></div><div class="feature-body"><span class="content-kicker" id="subjectKicker">SUBJECT 01 / GENERAL SCIENCE</span><h3 id="subjectTitle">Turning questions into discoveries.</h3><p id="subjectDescription">Help learners understand scientific ideas through observation, investigations, discussion and evidence-based reasoning.</p><div id="subjectTags" class="tag-list"><span>Observation</span><span>Reasoning</span><span>Student participation</span></div></div></div>
       </div>
-    </section>
+    </div></section>
 
-    <section id="education">
-      <div class="container"><div class="kicker reveal">Education & Credentials</div><h2 class="reveal">Academic foundation for science teaching</h2>
-        <div class="split">
-          <div class="edu-grid">
-            <article class="edu glass reveal"><span class="year">2026</span><h3>B.Ed. — Natural Science</h3><p>Mahatma Gandhi University, Kerala, India</p><span class="score">96.1%</span></article>
-            <article class="edu glass reveal"><span class="year">2020</span><h3>MSc — Environmental Science</h3><p>University of Calicut, Kerala, India</p><span class="score">77.8%</span></article>
-            <article class="edu glass reveal"><span class="year">2018</span><h3>BSc — Zoology</h3><p>University of Calicut, Kerala, India</p><span class="score">79.2%</span></article>
-            <article class="edu glass reveal"><span class="year">2019</span><h3>Diploma — Computer Applications</h3><p>India</p><span class="score">93.8%</span></article>
-          </div>
-          <div class="reveal">
-            <div class="cred-row"><div class="cred"><strong>CTET</strong><span>Primary Stage · Central Board of Secondary Education (CBSE), India</span></div><div class="cred"><strong>K-TET</strong><span>Category II · Department of General Education, Government of Kerala</span></div></div>
-            <div class="panel glass" style="margin-top:16px"><h3>Additional Professional Training</h3><p>Remote Sensing, GIS & GNSS Applications — IIRS/ISRO · GIS Training — Central University of Karnataka · Data Analytics with Python — IIT Roorkee.</p></div>
-            <div class="panel glass" style="margin-top:16px"><h3>Languages</h3><p>English — Fluent · Malayalam — Native · Hindi — Fluent</p></div>
-          </div>
-        </div>
+    <section class="section approach-section" id="approach"><div class="shell">
+      <div class="section-heading"><div><div class="section-marker">03 <i></i> TEACHING APPROACH</div><h2>Designed for engagement.<br><span>Grounded in understanding.</span></h2></div><p>My approach connects clear learning objectives with active participation, supportive feedback and differentiated learning activities.</p></div>
+      <div class="approach-grid">
+        <article class="approach-card"><div class="approach-icon">⌕</div><span class="card-num">01 / DISCOVER</span><h3>Inquiry-led learning</h3><p>Open with a question or phenomenon. Encourage predictions, observation and meaningful scientific discussion.</p><div class="small-tags"><span>Curiosity</span><span>Evidence</span></div></article>
+        <article class="approach-card"><div class="approach-icon">◈</div><span class="card-num">02 / EXPLORE</span><h3>Active experiences</h3><p>Use demonstrations, age-appropriate investigations and real-world examples to turn abstract concepts into experiences.</p><div class="small-tags"><span>Activities</span><span>Investigation</span></div></article>
+        <article class="approach-card"><div class="approach-icon">◉</div><span class="card-num">03 / INCLUDE</span><h3>Differentiated support</h3><p>Adapt resources, pace and classroom strategies to support learners with different starting points and needs.</p><div class="small-tags"><span>Inclusivity</span><span>Guidance</span></div></article>
+        <article class="approach-card"><div class="approach-icon">▤</div><span class="card-num">04 / REFLECT</span><h3>Assessment for learning</h3><p>Use formative questions, worksheets, feedback and progress checks to guide the next lesson and student growth.</p><div class="small-tags"><span>Feedback</span><span>Progress</span></div></article>
       </div>
-    </section>
+      <div class="learning-strip"><span class="strip-symbol">✧</span><p><b>Teaching philosophy</b> — Science is not simply a set of answers. It is a way of asking better questions, testing ideas and understanding the world.</p><a href="#contact">Let's connect <span>↗</span></a></div>
+    </div></section>
 
-    <section id="activities">
-      <div class="container"><div class="kicker reveal">Academic Activities</div><h2 class="reveal">Learning beyond the classroom</h2>
-        <div class="activity-grid">
-          <article class="activity glass reveal"><time>3–5 MAY 2023</time><h3>General Education Seminar</h3><p>5th International Congress on Kerala Studies.</p></article>
-          <article class="activity glass reveal"><time>8–10 NOV 2023</time><h3>Workshop for MRS Students of Kerala</h3><p>KSCSTE — Kerala Forest Research Institute, Peechi.</p></article>
-          <article class="activity glass reveal"><time>POSTGRADUATE RESEARCH</time><h3>Chalakudy River Basin</h3><p>MSc dissertation at the National Centre for Earth Science Studies (NCESS).</p></article>
-          <article class="activity glass reveal"><time>UNDERGRADUATE RESEARCH</time><h3>Spider Diversity Survey</h3><p>Research project focused on spider diversity in mangrove ecosystems.</p></article>
-        </div>
+    <section class="section experience-section" id="experience"><div class="shell">
+      <div class="section-heading"><div><div class="section-marker">04 <i></i> PROFESSIONAL JOURNEY</div><h2>Experience across classrooms,<br><span>science programmes &amp; outreach.</span></h2></div><p>From school-level science instruction to curriculum support and environmental education activities.</p></div>
+      <div class="experience-list">
+        <article class="exp-row reveal"><div class="exp-number">01 / 2021–2024</div><div class="exp-main"><span class="exp-type">SCIENCE EDUCATION PROGRAMME</span><h3>Junior Programme Executive — Science Education</h3><p>Mazhavillu: Teach Science for Kerala · K-DISC</p><div class="exp-pills"><span>Curriculum support</span><span>Outreach</span><span>Student learning</span></div></div><button type="button" class="exp-more" data-exp="kd" aria-label="Explore K-DISC experience">View details ↗</button></article>
+        <article class="exp-row reveal"><div class="exp-number">02 / 2021–2023</div><div class="exp-main"><span class="exp-type">SCIENTIFIC OUTREACH</span><h3>Institutional Assignment — Science Education</h3><p>Kerala Forest Research Institute (KFRI), Peechi</p><div class="exp-pills"><span>Biodiversity</span><span>Ecology</span><span>Workshops</span></div></div><button type="button" class="exp-more" data-exp="kfri" aria-label="Explore KFRI experience">View details ↗</button></article>
+        <article class="exp-row reveal"><div class="exp-number">03 / 2023–2024</div><div class="exp-main"><span class="exp-type">SCHOOL CLASSROOM PRACTICE</span><h3>Institutional Assignment — Science Teaching</h3><p>Indira Gandhi Memorial Model Residential Higher Secondary School, Nilambur</p><div class="exp-pills"><span>Standard 6</span><span>Practical lessons</span><span>Assessment</span></div></div><button type="button" class="exp-more" data-exp="school" aria-label="Explore school teaching experience">View details ↗</button></article>
       </div>
-    </section>
+      <p class="experience-footnote">Roles include programme-wide appointments and overlapping institutional assignments; dates are presented as recorded in the CV.</p>
+    </div></section>
 
-    <section id="contact">
-      <div class="container contact reveal"><div class="contact-grid"><div><div class="kicker">Abu Dhabi · UAE</div><h2>Open to Science & Biology teaching opportunities.</h2><p>Available for Primary Science, Middle School Science, General Science and suitable Biology teaching roles. Currently based in Abu Dhabi on a family visa and available for immediate joining.</p></div><div class="contact-buttons"><a class="btn btn-primary" href="mailto:pratheekshashaju123@gmail.com">✉ Email Me</a><a class="btn btn-secondary" href="tel:+971581739058">☎ Call</a><a class="btn btn-secondary" href="Pratheeksha_Shaju_ATS_CV.docx" download>↓ ATS CV</a></div></div></div>
-    </section>
+    <section class="section credentials-section" id="credentials"><div class="shell">
+      <div class="section-heading"><div><div class="section-marker">05 <i></i> EDUCATION &amp; QUALIFICATIONS</div><h2>Strong academic roots.<br><span>A commitment to keep learning.</span></h2></div><p>A foundation in teaching methodology, life sciences and environmental systems, supported by professional certifications.</p></div>
+      <div class="credentials-layout"><div class="degree-grid">
+        <article class="degree"><span class="degree-year">2026</span><div class="degree-symbol">✳</div><small>TEACHER EDUCATION</small><h3>B.Ed. in Natural Science</h3><p>Mahatma Gandhi University · Kerala</p><span class="degree-score">96.1%</span></article>
+        <article class="degree"><span class="degree-year">2020</span><div class="degree-symbol">◎</div><small>POSTGRADUATE</small><h3>MSc Environmental Science</h3><p>University of Calicut · Kerala</p><span class="degree-score">77.8%</span></article>
+        <article class="degree"><span class="degree-year">2018</span><div class="degree-symbol">⌬</div><small>UNDERGRADUATE</small><h3>BSc Zoology</h3><p>University of Calicut · Kerala</p><span class="degree-score">79.2%</span></article>
+        <article class="degree"><span class="degree-year">2019</span><div class="degree-symbol">⌘</div><small>ADDITIONAL QUALIFICATION</small><h3>Diploma in Computer Applications</h3><p>India</p><span class="degree-score">93.8%</span></article>
+      </div><aside class="qualification-side"><div class="qual-header">TEACHING ELIGIBILITY</div><div class="qual-item"><div class="qual-mark">CTET</div><div><h3>Central Teacher Eligibility Test</h3><p>Primary Stage · CBSE, India</p></div></div><div class="qual-item"><div class="qual-mark">K-TET</div><div><h3>Kerala Teacher Eligibility Test</h3><p>Category II · Government of Kerala</p></div></div><div class="qual-divider"></div><div class="qual-header">CONTINUING EDUCATION</div><p class="qualification-text">Remote Sensing, GIS &amp; GNSS Applications (IIRS/ISRO) · GIS Training (Central University of Karnataka) · Data Analytics with Python (IIT Roorkee).</p><a class="inline-link" href="Pratheeksha_Shaju_ATS_CV.docx" download>Download detailed ATS CV <span>↓</span></a></aside></div>
+    </div></section>
+
+    <section class="section research-section" id="research"><div class="shell"><div class="section-heading"><div><div class="section-marker">06 <i></i> RESEARCH &amp; INVOLVEMENT</div><h2>Science beyond<br><span>the lesson plan.</span></h2></div><p>Academic interests and professional activities that shape the examples, questions and perspectives I bring into teaching.</p></div>
+      <div class="research-grid"><article class="research-card"><span class="research-no">RESEARCH / 01</span><div class="research-art"><span>≈</span></div><h3>Chalakudy River Basin</h3><p>Postgraduate environmental studies dissertation at the National Centre for Earth Science Studies (NCESS).</p><div class="research-meta">ENVIRONMENTAL STUDIES</div></article>
+      <article class="research-card"><span class="research-no">RESEARCH / 02</span><div class="research-art variant-2"><span>✳</span></div><h3>Spider Diversity Survey</h3><p>Undergraduate research focusing on spider diversity within mangrove ecosystems.</p><div class="research-meta">BIODIVERSITY &amp; ECOLOGY</div></article>
+      <article class="research-card"><span class="research-no">OUTREACH / 03</span><div class="research-art variant-3"><span>◈</span></div><h3>Education &amp; Workshops</h3><p>Participation in a Kerala Studies seminar and an educational workshop for MRS students at KFRI.</p><div class="research-meta">SCIENCE LEARNING &amp; ENGAGEMENT</div></article></div>
+      <div class="languages"><span>COMMUNICATION</span><strong>English</strong><strong>Malayalam</strong><strong>Hindi</strong><p>Clear communication across multilingual learning environments.</p></div>
+    </div></section>
+
+    <section class="section contact-section" id="contact"><div class="shell contact-card"><div><div class="section-marker">07 <i></i> LET'S CONNECT</div><h2>Every great learning journey<br><span>begins with a conversation.</span></h2><p>Open to suitable Primary Science, Middle School Science, General Science and Biology teaching opportunities in the UAE.</p><div class="contact-meta"><span><i></i> Abu Dhabi, United Arab Emirates</span><span>Family visa · Available to join</span></div></div><div class="contact-actions"><a class="button button-primary" href="mailto:pratheekshashaju123@gmail.com?subject=Science%20Teaching%20Opportunity">Email Pratheeksha <span>↗</span></a><a class="button button-outline" href="tel:+971581739058">Call +971 58 173 9058</a><a class="button button-outline" href="Pratheeksha_Shaju_CV.docx" download>Download professional CV <span>↓</span></a><button class="copy-email" type="button" id="copyEmail">Copy email address ⧉</button></div></div></section>
   </main>
-
-  <footer><div class="container">© 2026 Pratheeksha Shaju · Science & Biology Teacher · Abu Dhabi, UAE<div class="footer-links"><a href="mailto:pratheekshashaju123@gmail.com">pratheekshashaju123@gmail.com</a><a href="tel:+971581739058">+971 58 173 9058</a></div></div></footer>
-
-<script>
-  /* PROFILE VIDEO -> PHOTO (plays in the portrait frame, then fades to the photo) */
-  const pv=document.getElementById('profileVideo'),pm=document.getElementById('portraitMedia');
-  const showPhoto=()=>pm.classList.add('show-photo');
-  const pvBtn=document.getElementById('pvSound');
-  const syncPvBtn=()=>{pvBtn.textContent=pv.muted?'🔇 Tap for sound':'🔊 Sound on'};
-  /* Try to play WITH sound first (works after the visitor clicks Skip / Enter).
-     If the browser blocks it, fall back to muted and show the "Tap for sound" button. */
-  const playProfile=()=>{
-    pm.classList.remove('show-photo');pv.currentTime=0;pv.muted=false;syncPvBtn();
-    const p=pv.play();
-    if(p&&p.catch)p.catch(()=>{pv.muted=true;syncPvBtn();const q=pv.play();if(q&&q.catch)q.catch(showPhoto)});
-  };
-  pvBtn.addEventListener('click',()=>{pv.muted=!pv.muted;syncPvBtn();if(pv.paused&&!pm.classList.contains('show-photo'))pv.play().catch(()=>{})});
-  pv.addEventListener('ended',showPhoto);
-  pv.addEventListener('error',showPhoto);
-
-  /* WELCOME INTRO */
-  const intro=document.getElementById('intro'),video=document.getElementById('welcomeVideo'),progress=document.getElementById('videoProgress');
-  const closeIntro=()=>{intro.classList.add('hidden');document.body.style.overflow='';video.pause();playProfile()};
-  const openIntro=()=>{pv.pause();intro.classList.remove('hidden');document.body.style.overflow='hidden';video.currentTime=0;video.muted=true;video.play().catch(()=>{});document.getElementById('soundBtn').textContent='Sound on'};
-  document.body.style.overflow='hidden';
-  video.addEventListener('timeupdate',()=>{if(video.duration)progress.style.width=(video.currentTime/video.duration*100)+'%'});
-  video.addEventListener('ended',()=>setTimeout(closeIntro,450));
-  document.getElementById('skipBtn').onclick=closeIntro;document.getElementById('enterBtn').onclick=closeIntro;
-  document.getElementById('soundBtn').onclick=e=>{video.muted=!video.muted;e.currentTarget.textContent=video.muted?'Sound on':'Sound off';if(video.paused)video.play()};
-  document.getElementById('replayBtn').onclick=openIntro;
-
-  const menu=document.getElementById('navLinks');document.getElementById('menuBtn').onclick=()=>menu.classList.toggle('open');
-  [...menu.querySelectorAll('a')].forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  // Lightweight science-particle background: molecules + links
-  const c=document.getElementById('scienceCanvas'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),pts=[];
-  function resize(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';x.setTransform(dpr,0,0,dpr,0,0);const n=Math.min(70,Math.floor(W/18));pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.7+.7,t:Math.random()>.76?1:0}))}
-  function draw(){x.clearRect(0,0,W,H);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r+(p.t?1.2:0),0,Math.PI*2);x.fillStyle=p.t?'rgba(115,230,164,.42)':'rgba(99,230,255,.24)';x.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<118){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle=`rgba(90,185,215,${.055*(1-d/118)})`;x.stroke()}}requestAnimationFrame(draw)}
-  addEventListener('resize',resize);resize();draw();
-</script>
+  <footer class="site-footer"><div class="shell footer-grid"><a href="#home" class="footer-brand">PS<span>.</span><small>PRATHEEKSHA SHAJU</small></a><p>Science is a way to see the world differently.<br>Curiosity is where it begins.</p><div class="footer-nav"><a href="#about">About</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></div></div><div class="shell footer-bottom"><span>© <span id="year">2026</span> Pratheeksha Shaju · Abu Dhabi, UAE</span><span>Designed for learning, discovery &amp; connection.</span><button type="button" id="backTop" aria-label="Back to top">↑ Back to top</button></div></footer>
+  <div class="modal" id="detailModal" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalHeading"><button class="modal-close" id="closeModal" type="button" aria-label="Close details">×</button><span class="modal-kicker" id="modalKicker"></span><h2 id="modalHeading"></h2><p class="modal-org" id="modalOrg"></p><div id="modalBody" class="modal-body"></div><button type="button" class="button button-primary" id="modalDone">Close details</button></div></div>
 </body>
 </html>
