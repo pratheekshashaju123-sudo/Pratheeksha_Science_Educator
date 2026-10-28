@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://pratheeksha.professionals-cv.in/sitemap.xml
