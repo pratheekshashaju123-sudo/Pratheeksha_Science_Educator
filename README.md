@@ -9,7 +9,7 @@ A responsive GitHub Pages website for `pratheeksha.professionals-cv.in`.
 - Sound-enabled autoplay is requested where browsers permit it. Otherwise, muted autoplay is used and a **Play welcome with sound** control restarts with audio following visitor interaction.
 - **No separate profile video**. The old `profile-video.mp4` is intentionally removed; the About section shows Pratheeksha's original photograph.
 - Interactive teaching subject explorer, classroom approach, experience details, qualifications, research and contact sections.
-- Both original DOCX CV versions are included and downloadable.
+- The latest approved PDF CV is included and downloadable.
 - Original Google Analytics measurement ID `G-YC8H32CX1J` and `CNAME` preserved.
 
 ## Publish on GitHub Pages
@@ -33,6 +33,5 @@ A responsive GitHub Pages website for `pratheeksha.professionals-cv.in`.
 - `assets/images/portrait.webp`: Photo derived from uploaded source image
 - `assets/images/welcome-poster.webp`: Poster derived from uploaded source image
 - `welcome.mp4`: Original uploaded welcome video, unchanged
-- `Pratheeksha_Shaju_CV.docx`: Original designed CV
-- `Pratheeksha_Shaju_ATS_CV.docx`: Original ATS CV
+- `Pratheeksha Shaju_Science Teacher.pdf`: Latest approved CV
 - `CNAME`: Existing custom domain
